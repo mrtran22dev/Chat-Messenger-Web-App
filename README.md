@@ -1,5 +1,5 @@
-# Two-Way-Chat-Messenger
-Two-Way Chat Messenger Web App utilizing Angular Framework + Firebase (NoSQL) database
+# Chat-Messenger-Web-App
+Chat Messenger Web App utilizing Angular Framework + Firebase (NoSQL) database
 
 SCOPE: This purpose of this project is to build a virtual chatroom with 2 users, utilizing the concepts of Angular 8 Framework and Firebase database. This project demonstrates a full-stack application of HTML/CSS/Typescript/Firebase (NoSQL) database via the Angular framework.
 
