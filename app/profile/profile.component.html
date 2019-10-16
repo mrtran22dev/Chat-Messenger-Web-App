@@ -1,0 +1,37 @@
+
+<div class="user">
+    <div id="header">PROFILE SETTING - UPDATE USERNAME/CITY</div>    
+    <div class="flex-container">
+        <div id="item1"><img src="" class="profilePic"></div>
+        
+        <div id="item2">
+            <table style="margin:5px">
+                <tr>
+                    <td>ID #</td>
+                    <td style="padding-left:8px; font-size:20px; border-bottom:1px solid grey">{{user.id}}</td>
+                </tr>
+                <tr>
+                    <td>USERNAME</td>
+                    <td><input [(ngModel)]="nameUpper" type=text></td>
+                </tr>
+                <tr>
+                    <td>CITY</td>
+                    <td><input [(ngModel)]="cityUpper" type=text></td>
+                </tr>
+            </table>
+            <div class="status" [ngSwitch]="updateFlag">
+                <ng-template [ngSwitchCase]="'cancel'"><span style="color:black">UPDATE CANCELLED</span></ng-template>
+                <ng-template [ngSwitchCase]="'success'"><span style="color:#097046">UPDATE SUCCESS!</span></ng-template>
+                <ng-template [ngSwitchCase]="'fail'"><span style="color:red">USERNAME ALREADY EXIST!</span></ng-template>
+                <ng-template ngSwitchDefault></ng-template>
+            </div>
+        </div>
+
+    </div>
+        <p id="updateCancel">
+            <button class="buttons"  (click)="update(nameUpper, cityUpper)">update</button>
+            <button class="buttons" (click)="cancel()">cancel</button>
+        </p>
+    
+    <button id="home" class="buttons"><a routerLink="" routerLinkActive="active">home</a></button>
+</div>

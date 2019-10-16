@@ -1,0 +1,17 @@
+<div id="msgContainer">
+    <div id="header">
+        <img src="../../assets/baseball.png" style="width:20px">
+        CHAT MESSAGES WILL APPEAR BELOW HERE
+        <img src="../../assets/baseball.png" style="width:20px">
+    </div>
+    <!-- use query and promise -->
+    <!-- <div id="messages" *ngFor="let msg of msgArray">{{msg.name}} : {{msg.msg}}</div> -->
+    <!-- use observable -->
+    <div id="messages" *ngFor="let msg of orderMessages | async">{{msg.name.toUpperCase()}} : {{msg.msg}}</div>
+</div>
+<div id="findClear">
+    <!-- <input id='find' [(ngModel)]="text"> -->
+    <button class="buttons" (click)="clear()">clear chat</button>
+</div>
+
+

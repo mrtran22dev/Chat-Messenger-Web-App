@@ -1,0 +1,62 @@
+<div id="summary">
+    <div id="header">CHAT MESSENGER WEB APP</div> 
+    <div id="work">
+        <p><span style="text-decoration:underline; font-size:30px;">SCOPE:</span> This purpose of this project is to build a virtual chatroom with 2 users, utilizing the concepts of Angular 8 Framework and Firebase database.  This project demonstrates a full-stack application of HTML/CSS/Typescript/Firebase (NoSQL) database via the Angular framework.</p>
+        <p style="margin-top:20px; font-size:30px; text-align:center; text-decoration:underline">CORE CONCEPTS</p>
+        <!-- <p><img src="../../assets/checkmark1.png" style="width:30px"><span> String interpolation, one/two-way data binding </span> </p> -->
+        <p><img src="../../assets/checkmark1.png"> @Input/@Output decorators for custom property + event binding (parent/child components)</p>
+        <p><img src="../../assets/checkmark1.png"> Routing + Routing Parameters for redirection to subpage</p>
+        <p><img src="../../assets/checkmark1.png"> Usage of angular directives - *ngFor, *ngIf, ngSwitch, ngModel, etc.</p>
+        <p><img src="../../assets/checkmark1.png"> ngOnChanges() lifecycle hook to trigger database document creation upon object reference change</p>
+        <p><img src="../../assets/checkmark1.png"> Created a Data Service to interface with Firebase NoSQL database</p>
+        <p><img src="../../assets/checkmark1.png"> Used Data Service to subscribe to observables for data manipulation and/or pass to call back functions</p>
+        <p><img src="../../assets/checkmark1.png"> Performed CRUD operations to Firebase database collections + documents</p>
+        <p><img src="../../assets/checkmark1.png"> Performed Firebase queries and ordered sorting</p>
+    </div>
+</div>
+
+<app-send [userMsg]="userMsg"></app-send>                       <!-- bind app-comp userMsg to send-comp @Input userMsg -->
+
+<app-chatroom></app-chatroom>
+<div class="flex-container">
+    <div id="user1" class="user">
+        <div class="chatHeader">CHAT USER 1</div> 
+        <div class="flex-container1">
+            <div><img src="../../assets/Aslogo1.png" class="profilePic"></div>
+            <div>
+                <p>ID: {{userArray[0].id}}</p>
+                <p style="display: inline">NAME: </p><p #user1 class="name" [textContent]="userArray[0].name.toUpperCase()" style="display:inline"></p>
+                <p>CITY:  {{userArray[0].city.toUpperCase()}}</p>
+            </div>
+            <div>
+                <button class="buttons"><a routerLink="/profile/{{username1}}" routerLinkActive="active">edit profile</a></button>
+            </div>
+        </div>
+        <textarea id="tbox1" #msg1 [(ngModel)]="clearString1" placeholder="Type message here ..."></textarea>
+        <button class="buttons" (click)="send(userArray[0].name, msg1.value)" style="display:block; margin: auto">SEND</button>
+    </div>
+
+    <div id="user2" class="user">
+        <div class="chatHeader">CHAT USER 2</div>
+        <div class="flex-container1">
+            <div><img src="../../assets/Aslogo2.png" class="profilePic" style="margin:0px; padding:0px;"></div>
+            <div>
+                <p>ID: {{userArray[1].id}}</p>
+                <p style="display: inline">NAME: </p><p #user1 class="name" [textContent]="userArray[1].name.toUpperCase()" style="display:inline"></p>
+                <p>CITY: {{userArray[1].city.toUpperCase()}}</p>
+            </div>
+            <div>
+                <button class="buttons"><a routerLink="/profile/{{username2}}" routerLinkActive="active">edit profile</a></button>
+            </div>
+        </div>
+            <textarea id="tbox2" #msg2 [(ngModel)]="clearString2" placeholder="Type message here ..."></textarea>
+            <button class="buttons" (click)="send(userArray[1].name, msg2.value)" style="display:block; margin: auto">SEND</button>              
+    </div>    
+</div>
+
+<div id="footer">
+    <img src="../../assets/tree1.png">
+    ROOTS IN OAKLAND
+    <img src="../../assets/tree1.png">
+</div>
+

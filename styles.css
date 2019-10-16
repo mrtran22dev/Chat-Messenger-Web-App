@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+
+body {
+    background-image: url("./assets/Asbackground1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-family: "frontpage";
+    margin: 0px;
+}
+
+@font-face {
+    font-family: 'Legend';
+    src: url("./assets/legend.ttf") format('truetype');
+    font-family: 'frontpage';
+    src: url("./assets/FrontPageNeue.otf") format('truetype');
+}

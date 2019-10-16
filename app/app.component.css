@@ -1,0 +1,18 @@
+.user {
+    background-color: lightgrey;
+    border: 1px solid black;
+    width: 33%;
+    display: inline-block;
+    margin: 20px;
+    padding: 10px;
+}
+
+.profilePic {
+    height: 70px;
+    width: 70px;
+    background-color: darkgray;
+    border: 1px solid black;
+    border-radius: 35px;
+    float: left;
+    margin: 20px;
+}

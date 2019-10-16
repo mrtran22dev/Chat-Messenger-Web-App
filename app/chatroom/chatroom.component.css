@@ -1,0 +1,55 @@
+#msgContainer {
+    background-color: lightgrey;
+    background-image: url("../../assets/Asbackground.jpg");
+    border: 3px solid #F9FEEE;
+    border-radius: 10px 10px 0px 0px;
+    width: auto;
+    margin: auto;
+    margin: 0px 20px 0px 20px;
+    height: 300px;
+    overflow-y: scroll;
+}
+
+#header {
+    background-color: #FFB633;
+    border-bottom:3px solid #F9FEEE;
+    text-align: center;
+    letter-spacing: 1px;
+    margin: 0px;
+    padding: 5px;
+}
+
+#messages {
+    background-repeat: repeat;
+    font-size: 20px;
+    letter-spacing: 1px;
+    padding-left: 5px;
+    /* height: 200px;
+    border: 1px solid black;
+    padding: 10px; */
+}
+
+#findClear {
+    border: 3px solid #F9FEEE;
+    border-top-width: 0px;
+    background-color: #FFB633;
+    border-radius: 0px 0px 10px 10px;
+    width: auto;
+    margin: auto;
+    margin: 0px 20px 0px 20px;
+    padding: 10px;
+}
+
+.buttons {
+    font-family: "Legend";
+    background-color: #097046;
+    color: #F9FEEE;
+    padding: 5px;
+    display: block;
+    margin: auto;
+}
+
+@font-face {
+    font-family: 'Legend';
+    src: url("../../assets/legend.ttf") format('truetype');
+}
